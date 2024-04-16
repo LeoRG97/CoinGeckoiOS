@@ -19,7 +19,6 @@ class CryptocurrencyDomainMapper {
         // filtrar si el símbolo existe en el dictionary de SymbolListDic
         let globalCryptoList = cryptoList.filter { symbolListDic[$0.symbol] ?? false }
         
-        print(globalCryptoList)
         // Patrón Builder para construir los objetos de diferentes fuentes
         let cryptocurrencyBuilderList = globalCryptoList.map {
             CryptocurrencyBuilder(id: $0.id, name: $0.name, symbol: $0.symbol)

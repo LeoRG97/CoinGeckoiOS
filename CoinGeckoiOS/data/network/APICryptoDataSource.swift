@@ -18,7 +18,6 @@ class APICryptoDataSource: ApiDataSourceType {
     
     //https://api.coingecko.com/api/v3/global
     func getGlobalCryptoSymbolList() async -> Result<[String], HTTPClientError> {
-        print("getSymbolList")
         let endpoint = Endpoint(path: "global", queryParams: [:], method: .GET)
         
         let result = await httpClient.makeRequest(endpoint: endpoint, baseUrl: "https://api.coingecko.com/api/v3/")
@@ -40,12 +39,10 @@ class APICryptoDataSource: ApiDataSourceType {
     //https://api.coingecko.com/api/v3/coins/list
     func getCryptoList() async -> Result<[CryptocurrencyBasicDTO], HTTPClientError> {
     
-        print("getCryptoList")
         let endpoint = Endpoint(path: "coins/list", queryParams: [:], method: .GET)
         
         let result = await httpClient.makeRequest(endpoint: endpoint, baseUrl: "https://api.coingecko.com/api/v3/")
         
-        print(result)
         guard case .success(let data) = result else {
             return .failure(handleError(error: result.failureValue as? HTTPClientError))
         }
@@ -61,7 +58,6 @@ class APICryptoDataSource: ApiDataSourceType {
     
     //https://api.coingecko.com/api/v3/simple/price?ids=3&vs_currencies=2
     func getPriceInfoForCryptos(id: [String]) async -> Result<[String : CryptocurrencyPriceDTO], HTTPClientError> {
-        print("getPriceInfo")
         // cuando una request requiere queryParams, se pueden definir en un Dictionary
         let queryParams = [
             "ids": id.joined(separator: ","), // convierte un array a un String con los valores separados por un caracter
