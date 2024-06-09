@@ -11,9 +11,11 @@ import Combine
 struct GlobalCryptoListView: View {
     
     @ObservedObject private var viewModel: GlobalCryptoListViewModel
+    private let createCryptoDetailView: CreateCryptoDetailView
     
-    init(viewModel: GlobalCryptoListViewModel) {
+    init(viewModel: GlobalCryptoListViewModel, createCryptoDetailView: CreateCryptoDetailView) {
         self.viewModel = viewModel
+        self.createCryptoDetailView = createCryptoDetailView
     }
     
     var body: some View {
@@ -22,11 +24,19 @@ struct GlobalCryptoListView: View {
                 ProgressView().progressViewStyle(.circular)
             } else {
                 if viewModel.showErrorMessage == "" {
-                    List {
-                        ForEach(viewModel.cryptos, id: \.id) { crypto in
-                            CryptoListItemView(item: crypto)
+                    NavigationStack {
+                        List {
+                            ForEach(viewModel.cryptos, id: \.id) { crypto in
+                                NavigationLink{
+                                    createCryptoDetailView.create(cryptocurrency: crypto) // composition root injection
+                                } label: {
+                                    CryptoListItemView(item: crypto)
+                                }
+                               
+                            }
                         }
                     }
+                   
                 } else {
                     Text(viewModel.showErrorMessage!)
                         .foregroundStyle(.red)

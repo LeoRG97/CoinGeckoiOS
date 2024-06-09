@@ -30,6 +30,7 @@ class APICryptoDataSource: ApiDataSourceType {
             return .failure(.parsingError)
         }
         
+        
         // lo que se requiere es devolver un array de keys nada más
         return .success(symbolList.data.cryptocurrencies.map { $0.key })
         
@@ -89,7 +90,7 @@ class APICryptoDataSource: ApiDataSourceType {
     }
     
     private func handleError(error: HTTPClientError?) -> HTTPClientError {
-        guard let error = error else { 
+        guard let error = error else {
             return .genericError
         }
         return error
