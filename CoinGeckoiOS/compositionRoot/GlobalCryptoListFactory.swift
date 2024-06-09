@@ -11,7 +11,10 @@ class GlobalCryptoListFactory {
     
     // crea la View (el único que es público para otras clases)
     static func create() -> GlobalCryptoListView {
-        return  GlobalCryptoListView(viewModel: createViewModel())
+        return  GlobalCryptoListView(
+            viewModel: createViewModel(),
+            createCryptoDetailView: CryptoDetailFactory() // inyección del Factory para crear la vista de detalle
+        )
     }
     
     // crea el ViewModel

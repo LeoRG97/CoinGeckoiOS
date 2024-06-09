@@ -18,3 +18,11 @@ protocol ApiDataSourceType {
     func getPriceInfoForCryptos(id: [String]) async -> Result<[String: CryptocurrencyPriceDTO], HTTPClientError>
     
 }
+
+
+// coins/{id}/market_chart
+protocol ApiPriceDataSourceType {
+    func getPriceHistory(id: String, days: Int) async -> Result<CryptocurrencyPriceHistoryDTO, HTTPClientError>
+}
+
+

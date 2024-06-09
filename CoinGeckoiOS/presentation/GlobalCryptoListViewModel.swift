@@ -35,6 +35,7 @@ class GlobalCryptoListViewModel: ObservableObject {
                 return
             }
             
+            
             let presentableCryptos = cryptos.map {CryptoListPresentableItem(domainModel: $0) }
 
           

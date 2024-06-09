@@ -18,6 +18,52 @@
             endingLineNumber = "11"
             landmarkName = "GlobalCryptoListViewModel"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "FFB22792-9511-4EE4-BDF2-1842555E6A1B - c9efeb2c6e5e96c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoinGeckoiOS.GlobalCryptoListViewModel.deinit"
+                  moduleName = "CoinGeckoiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/Desarrollo/SwiftApps/CoinGeckoiOS/CoinGeckoiOS/presentation/GlobalCryptoListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "FFB22792-9511-4EE4-BDF2-1842555E6A1B - 60cbe6e59c412825"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoinGeckoiOS.GlobalCryptoListViewModel.__deallocating_deinit"
+                  moduleName = "CoinGeckoiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/Desarrollo/SwiftApps/CoinGeckoiOS/CoinGeckoiOS/presentation/GlobalCryptoListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96B8561E-98C2-4B04-B57F-79A51E031584"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoinGeckoiOS/presentation/CryptocurrencyPresentableErrorMapper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "CryptocurrencyPresentableErrorMapper"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
